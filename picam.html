@@ -45,7 +45,7 @@
     
         $(document).ready(function () 
           {
-              $.get("/images/picam/", function(data) 
+              $.get("./images/picam/", function(data) 
               {
                   document.getElementById("photos").innerHTML = data;
               });
@@ -56,7 +56,7 @@
 
             let nodeList = document.querySelectorAll("li");
             for (let i = 0; i < nodeList.length; i++) {
-              let photo = "images/picam/" + nodeList[i].innerText
+              let photo = "./images/picam/" + nodeList[i].innerText
 
               var img = document.createElement("img");
               img.src = photo;
