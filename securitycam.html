@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <!--<meta name="viewport" content="width=device-width" />-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Eric Arezza</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mate&display=swap" rel="stylesheet"> 
+    
+        <link href="styles/pistyle.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
+    </head>
+
+    <body>
+  
+        <header>
+            <div class="my-name"><a href=""><h1>PiCam Detections</h1></a></div>
+    
+        </header>
+    
+        <main>
+            <section>
+                <button onclick="showPhotos()">Show photos</button>
+                <div id="photos"></div>
+            
+            </section>
+            
+    
+        </main>
+    
+        <footer>
+
+            <div><a href="./index.html"><p>Home</p></a></div>
+
+        </footer>
+    
+    
+    </body>
+
+    <script>
+    
+        $(document).ready(function () 
+          {
+              $.get("/images/picam/", function(data) 
+              {
+                  document.getElementById("photos").innerHTML = data;
+              });
+          })
+            
+        function showPhotos() {
+        
+
+            let nodeList = document.querySelectorAll("li");
+            for (let i = 0; i < nodeList.length; i++) {
+              let photo = "images/picam/" + nodeList[i].innerText
+
+              var img = document.createElement("img");
+              img.src = photo;
+              var src = document.getElementById("photos");
+              src.appendChild(img);
+            }
+            
+            let texts = document.querySelectorAll("h1");
+            for (let i = 1; i < texts.length; i++) {
+                texts[i].remove()
+            };
+
+        }
+
+    </script>
+
+</html>
+
