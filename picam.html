@@ -25,7 +25,7 @@
     
         <main>
             <section>
-                <button onclick="showPhotos()">Show photos</button>
+                <!--<button onclick="showPhotos()">Show photos</button>-->
                 <div id="photos"></div>
             
             </section>
@@ -70,38 +70,7 @@
             }
         };
         request.send();
-	    
-	/*
-        $(document).ready(function () 
-          {
-              $.get("./images/picam/", function(data) 
-              {
-                  document.getElementById("photos").innerHTML = data;
-		  console.log(data);
-              });
-          })
-        */
-	/*
-        function showPhotos() {
-        
-
-            let nodeList = document.querySelectorAll("li");
-            for (let i = 0; i < nodeList.length; i++) {
-              let photo = "./images/picam/" + nodeList[i].innerText
-
-              var img = document.createElement("img");
-              img.src = photo;
-              var src = document.getElementById("photos");
-              src.appendChild(img);
-            }
-            
-            let texts = document.querySelectorAll("h1");
-            for (let i = 1; i < texts.length; i++) {
-                texts[i].remove()
-            };
-
-        }
-	*/
+	
     </script>
 
 </html>
