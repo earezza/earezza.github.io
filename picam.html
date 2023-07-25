@@ -43,17 +43,10 @@
     </body>
 
     <script>
-	function httpGet(theUrl)
-        {
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open( "GET", "https://github.com/earezza/earezza.github.io/tree/main/images/picam/", false ); // false for synchronous request
-            xmlHttp.send( null );
-            console.log(xmlHttp.responseText);
-        }
     
         $(document).ready(function () 
           {
-              $.get("https://github.com/earezza/earezza.github.io/tree/main/images/picam/", function(data) 
+              $.get("./images/picam/", function(data) 
               {
                   document.getElementById("photos").innerHTML = data;
 		  console.log(data);
