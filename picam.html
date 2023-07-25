@@ -44,41 +44,32 @@
 
     <script>
 
-	// relative path to the desired directory
-    const directory = "./tree/main/images/picam/";
-    
-    // selector for the relevant links in the directory's index page
-    const selector = "li";
-    
-    const request = new XMLHttpRequest();
-    request.open("GET", directory, true);
-    
-    request.onload = () => {
-        // succesful response
-        if(request.status >= 200 && request.status < 400)
-        {
-            // create DOM from response HTML
-            const doc = new DOMParser().parseFromString(request.responseText, "text/html");
-    
-            // get all links
-            const links = doc.querySelectorAll(selector);
-            console.log("Links:", links);
-    
-            links.forEach(link => {
-                // do stuff with the links
-                console.log(link.outerText)
-                
-                let photo = "./images/picam/" + link.outerText
+	const directory = "./images/picam/";
+        const selector = "li";
+        
+        const request = new XMLHttpRequest();
+        request.open("GET", directory, true);
+        
+        request.onload = () => {
+            // succesful response
+            if(request.status >= 200 && request.status < 400)
+            {
+                // create DOM from response HTML
+                const doc = new DOMParser().parseFromString(request.responseText, "text/html");
+                const links = doc.querySelectorAll(selector);
+        
+                links.forEach(link => {
+                    console.log(link.outerText)
 
-                var img = document.createElement("img");
-                img.src = photo;
-                var src = document.getElementById("photos");
-                src.appendChild(img);
-                
-            });
-        }
-    };
-    request.send();
+                    var img = document.createElement("img");
+                    img.src = directory + link.outerText;
+                    var src = document.getElementById("photos");
+                    src.appendChild(img);
+                    
+                });
+            }
+        };
+        request.send();
 	    
 	/*
         $(document).ready(function () 
@@ -90,6 +81,7 @@
               });
           })
         */
+	/*
         function showPhotos() {
         
 
@@ -109,7 +101,7 @@
             };
 
         }
-
+	*/
     </script>
 
 </html>
