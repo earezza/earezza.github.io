@@ -58,6 +58,7 @@ section {
 .education,
 .career,
 .skills,
+.projects,
 .hobbies {
   display: flex;
   flex-direction: row;
@@ -97,6 +98,10 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   height: auto;
+}
+.picam {
+    max-width: 500px;
+    align-self: center;
 }
 
 header,
