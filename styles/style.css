@@ -308,11 +308,11 @@ ul {
     align-items: center;
   }
 
-  .career:nth-of-type(odd) .picture, 
-  .education:nth-of-type(odd) .picture,
-  .skills:nth-of-type(odd) .picture,
-  .projects:nth-of-type(odd) .picture, 
-  .hobbies:nth-of-type(odd) .picture {
+  .career:nth-of-type(odd), 
+  .education:nth-of-type(odd),
+  .skills:nth-of-type(odd),
+  .projects:nth-of-type(odd), 
+  .hobbies:nth-of-type(odd){
     float:left;
   }
 
@@ -324,11 +324,11 @@ ul {
     text-align: right;
   }
 
-  .career:nth-of-type(even) .picture, 
-  .education:nth-of-type(even) .picture,
-  .skills:nth-of-type(even) .picture,
-  .projects:nth-of-type(even) .picture, 
-  .hobbies:nth-of-type(even) .picture {
+  .career:nth-of-type(even), 
+  .education:nth-of-type(even),
+  .skills:nth-of-type(even),
+  .projects:nth-of-type(even), 
+  .hobbies:nth-of-type(even){
     float:right;
   }
 
