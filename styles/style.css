@@ -302,7 +302,10 @@ ul {
   }
 
   .about .picture {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .career:nth-of-type(odd) .picture, 
