@@ -251,7 +251,7 @@ ul {
 }
 
 /* for larger screens*/
-@media only screen and (min-width: 641px) { 
+@media only screen and (min-width: 768px) { 
   header{
     height: 150px;
   }
@@ -261,7 +261,7 @@ ul {
 }
 
 /* for smaller screens and phones*/
-@media only screen and (max-width: 641px) {
+@media only screen and (max-width: 768px) {
   
   html {
     font-size: 1.25rem;
@@ -301,39 +301,41 @@ ul {
     display: inline !important;
   }
 
-  .about .picture {
+  .about .picture, .hobbies .picture {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .career:nth-of-type(odd), 
-  .education:nth-of-type(odd),
-  .skills:nth-of-type(odd),
-  .projects:nth-of-type(odd), 
-  .hobbies:nth-of-type(odd){
-    float:left;
+  .career:nth-of-type(odd) .picture, 
+  .education:nth-of-type(odd) .picture,
+  .skills:nth-of-type(odd) .picture,
+  .projects:nth-of-type(odd) .picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
   }
 
-  .career:nth-of-type(odd) .content, 
-  .education:nth-of-type(odd) .content,
+  .career:nth-of-type(odd) .content *, 
+  .education:nth-of-type(odd) .content *,
   .skills:nth-of-type(odd) .content,
   .projects:nth-of-type(odd) .content, 
   .hobbies:nth-of-type(odd) .content {
     text-align: right;
   }
 
-  .career:nth-of-type(even), 
-  .education:nth-of-type(even),
-  .skills:nth-of-type(even),
-  .projects:nth-of-type(even), 
-  .hobbies:nth-of-type(even){
-    float:right;
+  .career:nth-of-type(even) .picture, 
+  .education:nth-of-type(even) .picture,
+  .skills:nth-of-type(even) .picture,
+  .projects:nth-of-type(even) .picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
   }
 
-  .career:nth-of-type(even) .content, 
-  .education:nth-of-type(even) .content,
+  .career:nth-of-type(even) .content *, 
+  .education:nth-of-type(even) .content *,
   .skills:nth-of-type(even) .content,
   .projects:nth-of-type(even) .content, 
   .hobbies:nth-of-type(even) .content {
